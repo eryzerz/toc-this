@@ -1,0 +1,22 @@
+[project]
+name = "toc-this"
+version = "0.1.0"
+description = "Add a clickable table of contents to PDFs that have none, including scanned ones"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.9"
+authors = [{ name = "Eryz", email = "eryzero@gmail.com" }]
+dependencies = ["pymupdf>=1.24"]
+
+[project.urls]
+Homepage = "https://github.com/eryzerz/toc-this"
+
+[project.scripts]
+toc-this = "toc_this:main"
+
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["toc_this.py"]
